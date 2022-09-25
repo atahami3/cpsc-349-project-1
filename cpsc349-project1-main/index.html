@@ -5,6 +5,11 @@ title: Home
 <header>
     <h1>{{ title }} </h1>
 </header>
+<ul>
+    {% for collections in pexels.collections.collections -%}
+    <li>{{ collections.title }} ({{collections.id}})</li>
+    {% endfor -%}
+</ul>
 
 <footer>
     <hr>
