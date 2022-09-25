@@ -5,11 +5,16 @@ title: Home
 <header>
     <h1>{{ title }} </h1>
 </header>
+<nav>
 <ul>
-    {% for collections in pexels.collections.collections -%}
-    <li>{{ collections.title }} ({{collections.id}})</li>
-    {% endfor -%}
+    <h1>This collection shows photos of trees and mountains covered in snow, and other landscapes during winter.</h1>
+    <ul>
+        {% for media in photos.uq9nuzt.media -%}
+        <li><a href="{{ media.src.tiny | url}}"><img src = {{media.src.tiny}}></li>
+        {% endfor -%}
+    </ul>
 </ul>
+</nav>
 
 <footer>
     <hr>
