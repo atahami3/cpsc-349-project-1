@@ -1,6 +1,6 @@
 ---
 layout: base
-title: welcome to the home page
+title: click on photo to see photographer information
 ---
 <header>
     <h1>{{ title }} </h1>
@@ -10,7 +10,8 @@ title: welcome to the home page
 <ul>
     
     {% for media in photos.uq9nuzt.media -%}
-    <li><a href="{{ media.src.tiny | url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
+    <li><a href="{{media.photographer_url | url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
+    
     {% endfor -%}
 
 </ul>
