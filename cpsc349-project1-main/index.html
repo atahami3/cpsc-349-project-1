@@ -8,10 +8,9 @@ title: click on photo to see photographer information
 </header>
 <nav>
 <ul>
-    
+
     {% for media in photos.uq9nuzt.media -%}
-    <li><a href="{{media.photographer_url | url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
-    
+    <li><a href="{{media.photographer_url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
     {% endfor -%}
 
 </ul>
@@ -22,6 +21,6 @@ title: click on photo to see photographer information
     <p>
         <small>
             <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
+        </small> 
     </p>
 </footer>
