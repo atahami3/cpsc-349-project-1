@@ -4,8 +4,7 @@ title: click on photo to see photographer information
 pagination:
     data: photos.uq9nuzt.media
     size: 1
-    alias : winter 
-permalink: "winter/pages-{{pagination.pageNumber | slug}}/index.html"
+    alias : winter
 ---
 <!--permalink: "diffrent/pages-{{pagination.pageNumber | slug}}/index.html"-->
 <header>
@@ -15,7 +14,7 @@ permalink: "winter/pages-{{pagination.pageNumber | slug}}/index.html"
 <nav>
 <ul>
         {% for media in photos.uq9nuzt.media -%}
-        <li><a href="{{media.alt}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
+        <li><a href="{{media.url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
         {% endfor -%}
     <!--<a href="{{pagination.href.previous}}">previous page</a>-->
 </ul>
