@@ -12,7 +12,7 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
 </header>
 
 <body>
-    <img src="{{ winter.src.large }}" alt="">
+    <img src="{{ winter.src.large }}" alt="could not get photo">
     <br>
     {{winter.alt}}
     <br>
@@ -28,7 +28,7 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
     <hr>
     <p>
         <li>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">prev</a>{% endif %}</li>
-        <li>{% if pagination.href.next %}<a href="{{pagination.href.next}}">next</a>{% endif %}</li>
+        <li>{% if pagination.href.next %}<a href="{{pagination.href.next}}">Next</a>{% endif %}</li>
         <small>
             <a href="https://www.pexels.com/%22%3EPhotos%22%3E">provided by Pexels</a>
         </small>
