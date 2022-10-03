@@ -27,6 +27,8 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
 <footer>
     <hr>
     <p>
+        <li>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">prev</a>{% endif %}</li>
+        <li>{% if pagination.href.next %}<a href="{{pagination.href.next}}">next</a>{% endif %}</li>
         <small>
             <a href="https://www.pexels.com/%22%3EPhotos%22%3E">provided by Pexels</a>
         </small>
