@@ -1,36 +1,28 @@
 ---
 layout: base
-title: click on photo to see photographer information
-pagination:
-    data: photos.uq9nuzt.media
-    size: 1
-    alias : winter
+title: Home
 ---
-<!--permalink: "diffrent/pages-{{pagination.pageNumber | slug}}/index.html"-->
 <header>
     <h1>{{ title }} </h1>
-    <h2>This collection shows photos of trees and mountains covered in snow, and other landscapes during winter.</h2>
+    <h2>This collection shows photos of trees and mountains covered in snow, and other landscapes during winter.
+        There is very little human presence, and only manmade structures such as log cabins are visible in some photos.</h2>
 </header>
-<nav>
-<ul>
-        {% for media in photos.uq9nuzt.media -%}
-        <li><a href="{{media.url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
-        {% endfor -%}
-    <!--<a href="{{pagination.href.previous}}">previous page</a>-->
-</ul>
 
-</nav>
+<body>
+    <nav>
+        <ul>
+            {% for media in photos.uq9nuzt.media -%}
+            <li><a href="/photos/{{media.id}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
+            {% endfor -%}
+        </ul>
+    </nav>
+</body>
 
 <footer>
     <hr>
-    <ul>
-        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-    
-        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-    </ul>
     <p>
         <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small> 
+            <a href="https://www.pexels.com/%22%3EPhotos"> provided by Pexels</a>
+        </small>
     </p>
 </footer>

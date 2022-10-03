@@ -1,0 +1,34 @@
+---
+layout: base
+title: Home
+pagination:
+    data: photos.uq9nuzt.media
+    size: 1
+    alias: winter
+permalink: "/photos/{{ winter.id | slug }}/index.html"
+---
+<header>
+    <br>
+</header>
+
+<body>
+    <img src="{{ winter.src.large }}" alt="">
+    <br>
+    {{winter.alt}}
+    <br>
+    {{winter.photographer}}
+    <br>
+    <a href="{{winter.photographer_url}}">{{winter.photographer_url}}</a>
+    <br>
+    {{winter.photographer_id}}
+
+</body>
+
+<footer>
+    <hr>
+    <p>
+        <small>
+            <a href="https://www.pexels.com/%22%3EPhotos%22%3E">provided by Pexels</a>
+        </small>
+    </p>
+</footer>
