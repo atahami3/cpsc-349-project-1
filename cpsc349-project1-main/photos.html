@@ -14,13 +14,13 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
 <body>
     <img src="{{ winter.src.large }}" alt="could not get photo">
     <br>
-    {{winter.alt}}
+    <p>{{winter.alt}}</p>
     <br>
-    {{winter.photographer}}
+    Photo By: {{winter.photographer}}
     <br>
-    <a href="{{winter.photographer_url}}">Photographer link</a>
+    Photographer ID: {{winter.photographer_id}}
     <br>
-    {{winter.photographer_id}}
+    <a href="{{winter.photographer_url}}">Click to contact photographer</a>
 
 </body>
 
@@ -29,7 +29,7 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
     <p>
         <li>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">prev</a>{% endif %}</li>
         <li>{% if pagination.href.next %}<a href="{{pagination.href.next}}">Next</a>{% endif %}</li>
-        <li><a href="http://localhost:8080/">Return To The Tomepage</a></li>
+        <li><a href="/">Return To The Tomepage</a></li><!--as professor if this is ok-->
         <small>
             <a href="https://www.pexels.com/%22%3EPhotos%22%3E">provided by Pexels</a>
         </small>
