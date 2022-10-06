@@ -7,10 +7,6 @@ pagination:
     alias: winter
 permalink: "/photos/{{ winter.id | slug }}/index.html"
 ---
-<header>
-
-</header>
-
 <body>
     <img src="{{ winter.src.large }}" alt="could not get photo">
     <br>
@@ -21,7 +17,6 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
     Photographer ID: {{winter.photographer_id}}
     <br>
     <a href="{{winter.photographer_url}}">Click to contact photographer</a>
-
 </body>
 
 <footer>
