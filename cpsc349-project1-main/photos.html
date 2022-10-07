@@ -19,27 +19,26 @@ permalink: "/photos/{{ winter.id | slug }}/index.html"
                 </li>
             </ul>
         </nav>
-    <img src="{{ winter.src.large }}" alt="could not get photo">
-    <br>
-    <p>{{winter.alt}}</p>
+
+        <img src="{{ winter.src.large }}" alt="could not get photo">
+        <br>
+        <p>{{winter.alt}}</p>
     
-    <p> Photo By: {{winter.photographer}} </p>
+        <p> Photo By: {{winter.photographer}} </p>
     
-    <p> Photographer ID: {{winter.photographer_id}} </p>
+        <p> Photographer ID: {{winter.photographer_id}} </p>
     
-    <a href="{{winter.photographer_url}}">Click to contact photographer</a>
+        <a href="{{winter.photographer_url}}"><i>Click to contact photographer</i></a>
     </main>
 
     <footer>
         <hr>
         <p>
-            <li>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">prev</a>{% endif %}</li>
-            <li>{% if pagination.href.next %}<a href="{{pagination.href.next}}">Next</a>{% endif %}</li>
-            <li><a href="/">Home</a></li><!--also allow access to home from footer-->
+            <p>{% if pagination.href.previous %}<a href="{{pagination.href.previous}}"><b>PREVIOUS</b></a>{% endif %}  {% if pagination.href.next %}<a href="{{pagination.href.next}}"><b>Next</b></a>{% endif %}</p>
+            <p><a href="/"><b>Home</a></b></p><!--also allow access to home from footer-->
             <small>
                 <a href="https://www.pexels.com/%22%3EPhotos%22%3E">provided by Pexels</a>
             </small>
         </p>
     </footer>
 </body>
-
